@@ -1,13 +1,9 @@
 public class Hello {
-	public native int HelloWorld();
-	static {
-		System.loadLibrary("hello");
-	}
 
 	public static void main(String args[])
 	{
-		Hello object = new Hello();
-		int id = object.HelloWorld();
+		GetThread object = new GetThread();
+		int id = object.getThreadID();
 		System.out.println("id is " + id);
 		while (true);
 	}

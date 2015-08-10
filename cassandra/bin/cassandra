@@ -64,6 +64,11 @@
 # NB: Developers should be aware that this script should remain compatible with
 # POSIX sh and Solaris sh. This means, in particular, no $(( )) and no $( ).
 
+#CASSANDRA TEAM Modification
+#trying LD_LIBRARY_PATH to load the JNI libraries
+export LD_LIBRARY_PATH=/home/centos/CassandraQoS/CassandraQoS/JNI:$LD_LIBRARY_PATH
+echo "the path is " $LD_LIBRARY_PATH > outfile
+
 # If an include wasn't specified in the environment, then search for one...
 if [ "x$CASSANDRA_INCLUDE" = "x" ]; then
     # Locations (in order) to use when searching for an include file.
